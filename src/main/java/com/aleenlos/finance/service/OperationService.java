@@ -1,14 +1,14 @@
 package com.aleenlos.finance.service;
 
-import com.aleenlos.finance.model.Operation;
+import com.aleenlos.finance.dto.OperationDTO;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface OperationService {
 
-    List<Operation> findAll();
-    Optional<Operation> findById(Long id);
-    Operation save(Operation operation);
+    List<OperationDTO> findAll();
+    Optional<OperationDTO> findById(Long id);
+    OperationDTO save(OperationDTO operation);
 
 }
