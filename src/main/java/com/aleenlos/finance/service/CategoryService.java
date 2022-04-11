@@ -1,14 +1,14 @@
 package com.aleenlos.finance.service;
 
-import com.aleenlos.finance.model.Category;
+import com.aleenlos.finance.dto.CategoryDTO;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface CategoryService {
 
-    List<Category> findAll();
-    Optional<Category> findById(Long id);
-    Category save(Category category);
+    List<CategoryDTO> findAll();
+    Optional<CategoryDTO> findById(Long id);
+    CategoryDTO save(CategoryDTO category);
 
 }
