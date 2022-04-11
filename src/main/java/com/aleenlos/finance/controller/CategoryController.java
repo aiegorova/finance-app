@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,12 +32,12 @@ public class CategoryController {
     }
 
     @PostMapping
-    public CategoryDTO save(CategoryDTO category) {
+    public CategoryDTO save(@RequestBody CategoryDTO category) {
         return categoryService.save(category);
     }
 
     @PutMapping
-    public CategoryDTO update(CategoryDTO category) {
+    public CategoryDTO update(@RequestBody CategoryDTO category) {
         return categoryService.save(category);
     }
 
