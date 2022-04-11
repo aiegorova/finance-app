@@ -9,7 +9,7 @@ public interface AccountService {
 
     List<Account> findAll();
     Optional<Account> findById(Long id);
-    Optional<Account> findByPhoneNumber();
+    Optional<Account> findByPhoneNumber(String phoneNumber);
     Account save(Account account);
 
 }

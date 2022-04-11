@@ -26,8 +26,8 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Optional<Account> findByPhoneNumber() {
-        return Optional.empty();
+    public Optional<Account> findByPhoneNumber(String phoneNumber) {
+        return accountRepository.findByPhoneNumberAndIsEnabledTrue(phoneNumber);
     }
 
     @Override
