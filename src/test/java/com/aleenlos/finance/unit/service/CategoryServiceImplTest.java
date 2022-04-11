@@ -1,8 +1,8 @@
-package com.aleenlos.finance.unit;
+package com.aleenlos.finance.unit.service;
 
-import com.aleenlos.finance.dao.OperationRepository;
-import com.aleenlos.finance.model.Operation;
-import com.aleenlos.finance.service.impl.OperationServiceImpl;
+import com.aleenlos.finance.dao.CategoryRepository;
+import com.aleenlos.finance.model.Category;
+import com.aleenlos.finance.service.impl.CategoryServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -19,36 +19,36 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class OperationServiceImplTest {
+class CategoryServiceImplTest {
 
     @Mock
-    private OperationRepository categoryRepository;
+    private CategoryRepository categoryRepository;
 
     @InjectMocks
-    private OperationServiceImpl categoryService;
+    private CategoryServiceImpl categoryService;
 
     @Test
     void findAll_listReturned() {
-        List<Operation> expected = new ArrayList<>();
-        expected.add(new Operation());
+        List<Category> expected = new ArrayList<>();
+        expected.add(new Category());
         when(categoryRepository.findAll()).thenReturn(expected);
-        List<Operation> actual = categoryService.findAll();
+        List<Category> actual = categoryService.findAll();
         assertEquals(expected, actual);
     }
 
     @Test
-    void findById_correctId_operationReturned() {
-        Optional<Operation> expected = Optional.of(new Operation());
+    void findById_correctId_categoryReturned() {
+        Optional<Category> expected = Optional.of(new Category());
         Mockito.when(categoryRepository.findById(CORRECT_ID)).thenReturn(expected);
-        Optional<Operation> actual = categoryService.findById(CORRECT_ID);
+        Optional<Category> actual = categoryService.findById(CORRECT_ID);
         assertEquals(expected, actual);
     }
 
     @Test
-    void save_correctOperation_operationReturned() {
-        Operation expected = new Operation();
+    void save_correctCategory_categoryReturned() {
+        Category expected = new Category();
         Mockito.when(categoryRepository.saveAndFlush(expected)).thenReturn(expected);
-        Operation actual = categoryService.save(expected);
+        Category actual = categoryService.save(expected);
         assertEquals(expected, actual);
     }
 

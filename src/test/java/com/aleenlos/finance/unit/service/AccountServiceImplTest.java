@@ -1,4 +1,4 @@
-package com.aleenlos.finance.unit;
+package com.aleenlos.finance.unit.service;
 
 import com.aleenlos.finance.dao.AccountRepository;
 import com.aleenlos.finance.model.Account;
