@@ -54,7 +54,7 @@ class OperationMapperTest {
     }
 
     @Test
-    void toDTO_correctCategory_equals() {
+    void toDTO_correctOperation_equals() {
         AccountDTO accountDTO = new AccountDTO(CORRECT_ID, "", "", CORRECT_PHONE_NUMBER);
         CategoryDTO categoryDTO = new CategoryDTO(CORRECT_ID, "", CategoryType.INCOME);
         OperationDTO expected = new OperationDTO(CORRECT_ID, accountDTO, categoryDTO, CORRECT_AMOUNT);

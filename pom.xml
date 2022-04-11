@@ -18,6 +18,7 @@
 		<liquibase.version>4.9.0</liquibase.version>
 		<lombok.version>1.18.22</lombok.version>
 		<mapstruct.version>1.4.2.Final</mapstruct.version>
+		<lombok-mapstruct.version>0.1.0</lombok-mapstruct.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -79,7 +80,7 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok-mapstruct-binding</artifactId>
-							<version>0.1.0</version>
+							<version>${lombok-mapstruct.version}</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
