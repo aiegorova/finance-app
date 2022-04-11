@@ -27,6 +27,7 @@ class AccountMapperTest {
                 .firstName("")
                 .lastName("")
                 .phoneNumber(CORRECT_PHONE_NUMBER)
+                .isEnabled(true)
                 .build();
         AccountDTO dto = new AccountDTO(CORRECT_ID, "", "", CORRECT_PHONE_NUMBER);
         Account actual = accountMapper.toEntity(dto);
