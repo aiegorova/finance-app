@@ -5,7 +5,10 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
 	    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
 
-    <include file="migrations/v-1.0/20220411_create_schema_finance.xml" relativeToChangelogFile="true"/>
-    <include file="migrations/v-1.0/20220411_create_table_account.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/v-1.0/20220410_create_schema_finance.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/v-1.0/20220410_create_table_account.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/v-1.0/20220410_create_table_category.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/v-1.0/20220410_create_table_operation.xml" relativeToChangelogFile="true"/>
+    <include file="migrations/v-1.0/20220411_add_foreign_key_operation.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

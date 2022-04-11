@@ -4,26 +4,20 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
 
-    <changeSet author="ermilovaalena@gmail.com" id="20220411_create_table_account">
-        <createTable tableName="account" schemaName="finance">
+    <changeSet author="ermilovaalena@gmail.com" id="20220411_create_table_category">
+        <createTable tableName="category" schemaName="finance">
             <column autoIncrement="true" name="id" type="BIGINT">
-                <constraints nullable="false" primaryKey="true" primaryKeyName="account_pkey"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_category"/>
             </column>
-            <column name="first_name" type="VARCHAR">
+            <column name="name" type="VARCHAR">
                 <constraints nullable="false"/>
             </column>
-            <column name="last_name" type="VARCHAR">
-                <constraints nullable="false"/>
-            </column>
-            <column name="phone_number" type="VARCHAR">
-                <constraints nullable="false"/>
-            </column>
-            <column defaultValueBoolean="true" name="is_enabled" type="BOOLEAN">
+            <column name="type" type="VARCHAR">
                 <constraints nullable="false"/>
             </column>
         </createTable>
         <rollback>
-            <dropTable tableName="account" schemaName="finance"/>
+            <dropTable tableName="category" schemaName="finance"/>
         </rollback>
     </changeSet>
 
