@@ -37,7 +37,7 @@ class CategoryServiceImplTest {
     }
 
     @Test
-    void findById_correct_accountReturned() {
+    void findById_correctId_categoryReturned() {
         Optional<Category> expected = Optional.of(new Category());
         Mockito.when(categoryRepository.findById(CORRECT_ID)).thenReturn(expected);
         Optional<Category> actual = categoryService.findById(CORRECT_ID);
@@ -45,7 +45,7 @@ class CategoryServiceImplTest {
     }
 
     @Test
-    void save_correctAccount_accountReturned() {
+    void save_correctCategory_categoryReturned() {
         Category expected = new Category();
         Mockito.when(categoryRepository.saveAndFlush(expected)).thenReturn(expected);
         Category actual = categoryService.save(expected);

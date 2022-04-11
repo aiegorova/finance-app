@@ -37,7 +37,7 @@ class AccountServiceImplTest {
     }
 
     @Test
-    void findById_correct_accountReturned() {
+    void findById_correctId_accountReturned() {
         Optional<Account> expected = Optional.of(new Account());
         Mockito.when(accountRepository.findById(CORRECT_ID)).thenReturn(expected);
         Optional<Account> actual = accountService.findById(CORRECT_ID);

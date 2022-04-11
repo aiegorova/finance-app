@@ -37,7 +37,7 @@ class OperationServiceImplTest {
     }
 
     @Test
-    void findById_correct_accountReturned() {
+    void findById_correctId_operationReturned() {
         Optional<Operation> expected = Optional.of(new Operation());
         Mockito.when(categoryRepository.findById(CORRECT_ID)).thenReturn(expected);
         Optional<Operation> actual = categoryService.findById(CORRECT_ID);
@@ -45,7 +45,7 @@ class OperationServiceImplTest {
     }
 
     @Test
-    void save_correctAccount_accountReturned() {
+    void save_correctOperation_operationReturned() {
         Operation expected = new Operation();
         Mockito.when(categoryRepository.saveAndFlush(expected)).thenReturn(expected);
         Operation actual = categoryService.save(expected);
